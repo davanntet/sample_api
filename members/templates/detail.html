@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+    Information
+{% endblock %}
+{% block mode %}
+    <h1>Information</h1>
+    {% if data  %}
+    <h2>ID:{{ data.id }}</h2>
+    <h2>First Name: {{ data.firstname }}</h2>
+    <h2>Last Name: {{ data.lastname }}</h2>
+    <h2>Age: {{ data.age }}</h2>
+    <h2>Gender: {{ data.sex }}</h2>
+    {% else %}
+    <h2>Not Found</h2>
+    {% endif %}
+    <a href="../">back</a>
+{% endblock %}
